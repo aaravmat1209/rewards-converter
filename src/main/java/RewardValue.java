@@ -6,12 +6,18 @@ public class RewardValue {
 
     public RewardValue(double cashVal) {
         this.flightCash = cashVal;
-        this.miles = cashVal / 0.0035;
     }
 
     public RewardValue(int mileVal) {
         this.miles = mileVal;
-        this.flightCash = mileVal * 0.0035;
+    }
+
+    public double convertFromCashToMiles(double flightCash) {
+        return flightCash / 0.0035;
+    }
+
+    public double convertFromMilesToCash(int miles) {
+        return miles * 0.0035;
     }
 
     public double getCashValue() {
